@@ -96,7 +96,6 @@
 	font-size: 1.5rem;
 }
 
-
 .header__logo-box {
 	position: static;
 	top: 0.5rem;
@@ -185,11 +184,7 @@
 .footer__item:not(:last-child) {
 	margin-right: 1.5rem;
 }
-.footer__link:link,
-.footer__link:visited {
-	transition: all 0.2s ease;
-	color: #fff;
-}
+
 .footer__link i {
 	display: inline-block;
 	font-size: 5rem;
@@ -203,10 +198,13 @@
 }
 .footer__link:link,
 .footer__link:visited {
-	color: #000;
+	transition: all 0.2s ease;
+	color: #fff;
+	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
 	display: inline-block;
+	text-decoration: underline;
 }
 .footer__link:link .fa-facebook-square,
 .footer__link:visited .fa-facebook-square {
@@ -1207,7 +1205,7 @@ body {
 }
 
 .paragraph {
-	text-align: center;
+	text-align: justify;
 	font-size: 2.4rem;
 	overflow-y: hidden;
 	line-height: 1.5;

@@ -1,0 +1,87 @@
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	// padding: 3rem;
+}
+
+.heading-primary {
+	color: $color-white;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+
+	&--main {
+		display: block;
+		font-size: 3rem;
+		font-weight: 400;
+		letter-spacing: 2rem;
+		animation-name: moveInLeft;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+	}
+	&--sub {
+		display: block;
+		font-size: 1rem;
+		font-weight: 700;
+		letter-spacing: 1.3rem;
+		margin-bottom: 6rem;
+		&.animation {
+			animation: moveInRight 1s ease-out;
+		}
+	}
+}
+
+.heading-secondary {
+	z-index: 10;
+	display: inline-block;
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	transform: skew(30px 30px);
+	background-image: linear-gradient(
+		to right,
+		$color-primary-light,
+		$color-primary-dark
+	);
+	-webkit-background-clip: text;
+	transition: all 0.2s ease;
+	letter-spacing: 2px;
+	color: transparent;
+	&:hover {
+		transform: skewY(2deg) skewX(3deg) scale(1.1);
+		text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.3);
+	}
+}
+
+.heading-tertiary {
+	font-size: $default-font-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.heading-four {
+	z-index: 10;
+	display: inline-block;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-weight: 400;
+	transform: skew(1rem 1rem);
+	background-image: linear-gradient(
+		to right bottom,
+		$color-primary-dark,
+		$color-secondary-light
+	);
+	-webkit-background-clip: text;
+	transition: all 0.2s ease;
+	letter-spacing: 2px;
+	color: transparent;
+	&:hover {
+		transform: skewY(1deg) skewX(1deg) scale(1.1);
+		text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.3);
+	}
+}
+.paragraph {
+	font-size: larger;
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}

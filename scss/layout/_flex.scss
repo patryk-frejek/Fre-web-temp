@@ -1,0 +1,39 @@
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	@media (max-width: 900px) {
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		//   &:nth-child(even){
+		//    flex-direction: column-reverse;
+
+		// }
+		gap: 3rem;
+	}
+}
+.flex-col-1-of-2 {
+	flex: 45%;
+	@media (min-width: 900px) {
+		flex: 45%;
+		gap: 3rem;
+	}
+
+	// 	@media (max-width:900px){
+	// 	flex:100%;
+	// 	gap: 3rem;
+	// }
+}
+.flex100 {
+	flex: 0 0 100%;
+	text-align: center;
+}
+// .flex-row {
+// 	flex-direction: row;
+// }
+// .flex-column {
+// 	flex-direction: column;
+// }

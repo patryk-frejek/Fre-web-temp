@@ -1,0 +1,167 @@
+.card {
+	perspective: 150rem;
+	-moz-perspective: 150rem;
+	height: 50rem;
+	position: relative;
+
+	&__side {
+		box-shadow: 0 0.5rem 2rem;
+		width: 100%;
+		border-radius: 3px;
+		overflow: hidden;
+		backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		text-align: center;
+		font-size: 2rem;
+		background-color: white;
+		height: 50rem;
+		transition: transform 0.8s ease;
+		&--front {
+			color: black;
+			transform: rotateY(0);
+		}
+		&--back {
+			color: white;
+			transform: rotateY(180deg);
+
+			&-1 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-primary-dark, 0.8),
+					rgba($color-primary-light, 0.8)
+				);
+			}
+			&-2 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-secondary-dark, 0.8),
+					rgba($color-secondary-light, 0.8)
+				);
+			}
+			&-3 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-tertiary-dark, 0.8),
+					rgba($color-tertiary-light, 0.8)
+				);
+			}
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+	}
+	&:hover &__side--back {
+		transform: rotateY(0);
+	}
+
+	&__picture {
+		background-size: cover;
+		background-blend-mode: screen;
+		height: 40%;
+		clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+		&--1 {
+			background-image: linear-gradient(
+					to right bottom,
+					$color-primary-dark,
+					$color-primary-light
+				),
+				url(/advanced-css-course-master/Natours/starter/img/nat-5.jpg);
+		}
+		&--2 {
+			background-image: linear-gradient(
+					to right bottom,
+					$color-secondary-dark,
+					$color-secondary-light
+				),
+				url(/advanced-css-course-master/Natours/starter/img/nat-6.jpg);
+		}
+		&--3 {
+			background-image: linear-gradient(
+					to right bottom,
+					$color-tertiary-dark,
+					$color-tertiary-light
+				),
+				url(/advanced-css-course-master/Natours/starter/img/nat-7.jpg);
+		}
+	}
+	&__heading {
+		position: absolute;
+		top: 8rem;
+		right: 2rem;
+		text-align: right;
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: 3rem;
+		-webkit-background-clip: text;
+		background-clip: text;
+		width: 55%;
+	}
+	&__heading-span {
+		padding: 1rem 1.5rem;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+
+		&--1 {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($color-primary-light, 0.8),
+				rgba($color-primary-dark, 0.8)
+			);
+		}
+
+		&--2 {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($color-secondary-light, 0.8),
+				rgba($color-secondary-dark, 0.8)
+			);
+		}
+
+		&--3 {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($color-tertiary-light, 0.8),
+				rgba($color-tertiary-dark, 0.8)
+			);
+		}
+	}
+	&__details {
+		color: $color-grey-dark;
+		margin: 0 auto;
+		display: flex;
+		padding: 3rem;
+		justify-content: center;
+		ul {
+			list-style: none;
+			width: 80%;
+
+			li {
+				font-size: 1.5rem;
+				text-align: center;
+				padding: 1rem;
+				&:not(:last-child) {
+					border-bottom: solid 1px $color-grey-light-2;
+				}
+			}
+		}
+	}
+
+	&__cta {
+	}
+
+	&__price-box {
+		padding: 1.5rem;
+	}
+	&__price-only {
+		font-weight: 700;
+	}
+	&__price-value {
+		font-weight: 200;
+		font-size: 8rem;
+	}
+}

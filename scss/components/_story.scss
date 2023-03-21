@@ -1,0 +1,52 @@
+.story {
+	position: relative;
+	width: 75%;
+	margin: 5rem auto;
+	background-color: rgba($color-white, 0.65);
+	box-shadow: 0 1.5rem 3rem $color-black;
+	font-size: $default-font-size;
+	padding: 6rem;
+	padding-left: 9rem;
+	border-radius: 3px;
+	transform: skewX(-12deg);
+
+	& > * {
+		transform: skewX(12deg);
+	}
+
+	&__shape {
+		width: 15rem;
+		height: 15rem;
+		float: left;
+		shape-outside: circle(50% at 50% 50%);
+		-webkit-shape-outside: circle(50% at 50% 50%);
+		clip-path: circle(50% at 50% 50%);
+		transform: translateX(-3rem) skewX(12deg);
+	}
+
+	&__image {
+		// width: 100%;     przez proporcje obrazka
+		transition: filter 0.5s;
+		height: 100%;
+		transform: translate(-20%);
+	}
+	&__caption {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 20%);
+		color: $color-white;
+		font-size: calc(#{$default-font-size} * 1.7);
+		text-align: center;
+		font-weight: 700;
+		opacity: 0;
+		transition: all 0.5s;
+	}
+	&:hover &__caption {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+	&:hover &__image {
+		filter: blur(3px) brightness(80%);
+	}
+}

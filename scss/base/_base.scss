@@ -1,0 +1,105 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%; //1 rem = 10px
+	scroll-behavior: smooth;
+	@include respond(big-desktop) {
+		font-size: 80%;
+	}
+	@include respond(4k){
+		font-size: 120%;
+	}
+	@include respond(tab-land) {
+		font-size: 70%;
+	}
+	@include respond(tab-port) {
+		font-size: 60%;
+	}
+	@include respond(phone) {
+	font-size: 60%;
+}
+}
+
+body {
+	box-sizing: border-box;
+}
+.main-container {
+	background-image: url(../img/background-body-2.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 0 0;
+	margin-top: -3rem;
+	@include respond(tab-port){
+			background-image: none;
+	}
+} 
+section {
+	&:not(:last-child) {
+		border-bottom: solid 3px darkgrey;
+	}
+}
+
+
+
+
+
+
+
+
+//////// ZMIANA PASKA NAWIGACJI NA PRZYCISK
+
+@media (max-width: 600px) {
+	.btn-menu {
+		display: block;
+		color: $color-white;
+		margin-top: 1rem;
+		background-color: rgba($color-primary-medium, $alpha: 0.8);
+		padding: 1rem 2rem;
+		border-radius: 0.2rem;
+		&:hover {
+			background-color: rgba($color-primary-dark, $alpha: 0.8);
+		}
+	}
+	.header {
+		&__logo-box {
+			position: absolute;
+			width: 8rem;
+		}
+	}
+	.navigation {
+		margin: 9rem 0 0;
+		width: 100%;
+		&__list {
+			transform: translateY(-150%);
+			display: none;
+			opacity: 0;
+			text-align: center;
+			flex-direction: column;
+			width: 100%;
+			margin: 0;
+		}
+		&__item {
+			font-size: 1rem;
+			z-index: 101;
+			padding: 1rem 0;
+			margin-right: 0;
+			border-top: 0.2rem solid $color-grey-dark;
+			&:hover,
+			&:active {
+				background-color: rgba($color-primary-medium, $alpha: 0.5);
+			}
+		}
+	}
+	.navigation__list.active {
+		display: flex;
+		transition: transform 1s ease;
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
