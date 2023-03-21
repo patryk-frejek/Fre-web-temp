@@ -1,45 +1,146 @@
 .header {
-	position: relative;
-	margin-bottom: 3rem;
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	text-align: center;
-	align-items: center;
-	justify-content: space-between;
-	box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+	&__contactbar {
+		position: relative;
+		z-index: inherit;
+		width: 100%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.634);
+	}
 
-	background-image: linear-gradient(
-			to bottom,
-			rgba($color-primary-light, 0.8),
-			rgba($color-primary-dark, 0.8)
-		),
-		url(https://cdn.pixabay.com/photo/2016/08/14/18/27/sailing-boat-1593613_1280.jpg);
-	background-size: cover;
-	background-position: center center;
-	&__logo-box {
-		position: static;
-		top: 1rem; 
-		left: 2rem;
-		padding: 1rem;
-		align-self: flex-start;
-		transition: transform 0.3s;
-		&:hover {
-			cursor: pointer;
-			transform: translateY(-0.3rem);
-			// box-shadow: 0 .2rem 4rem black;
+	&__contact-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-evenly;
+		height: 5vh;
+	}
+
+	&__container {
+		position: relative;
+		width: 100%;
+		height: 95vh;
+		background-color: #333;
+	}
+	&__box-container {
+		z-index: 4;
+		background-color: rgba($color-grey-dark, 0.7);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		border: solid 0.2rem $color-black;
+		border-radius: 0.7rem;
+		padding: 2rem 4rem;
+	}
+	&__split {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// flex-direction: column;
+
+		&--left {
+			left: 0px;
+			background: url("../img/header-background-left.JPG");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: white;
+			width: 50%;
+			transition: all 1s ease;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: $color-left;
+			}
+		}
+
+		&--right {
+			left: 50%;
+			background: url("../img/header-background-right.JPG");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: white;
+			width: 50%;
+			transition: all 1s ease;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: $color-right;
+			}
 		}
 	}
-	&__logo {
-		width: 5rem;
-		height: 7rem;
-	}
-	&__text-box {
-		position: absolute;
-		top: 40%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		text-align: center;
-		max-width: 70%;
-	}
 }
+
+//CONTACT LIST
+.contact-list__item {
+	display: inline-block;
+}
+.contact-list__link:link,
+.contact-list__link:visited {
+	color: white;
+	text-decoration: none;
+	font-size: 1.5rem;
+	transition: color 0.3s ease;
+	border-bottom: solid transparent 0.2rem;
+}
+.contact-list__link:hover,
+.contact-list__link:active {
+	color: greenyellow;
+	border-bottom: solid greenyellow 0.2rem;
+}
+
+// .header {
+// 	position: relative;
+// 	margin-bottom: 3rem;
+// 	display: flex;
+// 	flex-direction: row;
+// 	width: 100%;
+// 	text-align: center;
+// 	align-items: center;
+// 	justify-content: space-between;
+// 	box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+
+// 	background-image: linear-gradient(
+// 			to bottom,
+// 			rgba($color-primary-light, 0.8),
+// 			rgba($color-primary-dark, 0.8)
+// 		),
+// 		url(https://cdn.pixabay.com/photo/2016/08/14/18/27/sailing-boat-1593613_1280.jpg);
+// 	background-size: cover;
+// 	background-position: center center;
+// 	&__logo-box {
+// 		position: static;
+// 		top: 1rem;
+// 		left: 2rem;
+// 		padding: 1rem;
+// 		align-self: flex-start;
+// 		transition: transform 0.3s;
+// 		&:hover {
+// 			cursor: pointer;
+// 			transform: translateY(-0.3rem);
+// 			// box-shadow: 0 .2rem 4rem black;
+// 		}
+// 	}
+// 	&__logo {
+// 		width: 5rem;
+// 		height: 7rem;
+// 	}
+// 	&__text-box {
+// 		position: absolute;
+// 		top: 40%;
+// 		left: 50%;
+// 		transform: translate(-50%, -50%);
+// 		text-align: center;
+// 		max-width: 70%;
+// 	}
+// }
