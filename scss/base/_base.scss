@@ -62,6 +62,7 @@ section {
 		background-color: rgba($color-primary-medium, $alpha: 0.8);
 		padding: 1rem 2rem;
 		border-radius: 0.2rem;
+		z-index: 200;
 		&:hover {
 			background-color: rgba($color-primary-dark, $alpha: 0.8);
 		}
@@ -71,35 +72,5 @@ section {
 			position: absolute;
 			width: 8rem;
 		}
-	}
-	.navigation {
-		margin: 9rem 0 0;
-		width: 100%;
-		&__list {
-			transform: translateY(-150%);
-			display: none;
-			opacity: 0;
-			text-align: center;
-			flex-direction: column;
-			width: 100%;
-			margin: 0;
-		}
-		&__item {
-			font-size: 1rem;
-			z-index: 101;
-			padding: 1rem 0;
-			margin-right: 0;
-			border-top: 0.2rem solid $color-grey-dark;
-			&:hover,
-			&:active {
-				background-color: rgba($color-primary-medium, $alpha: 0.5);
-			}
-		}
-	}
-	.navigation__list.active {
-		display: flex;
-		transition: transform 1s ease;
-		transform: translateY(0);
-		opacity: 1;
 	}
 }

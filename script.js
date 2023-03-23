@@ -9,11 +9,11 @@ var split = document.getElementsByClassName("header__split");
 
 function init() {
 
-	// toggle.onclick = () => {
-	// 	navbar.classList.toggle("active");
-	// 	header.classList.toggle("active");
-	// 	console.log("testt");
-	// };
+	toggle.onclick = () => {
+		navbar.classList.toggle("active");
+		header.classList.toggle("active");
+		console.log("testt");
+	};
 		left.onmouseenter = () => {
 			left.style.width = "75%";
 			right.style.width = "25%";

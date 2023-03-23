@@ -1,22 +1,25 @@
 .navigation {
 	display: flex;
 	position: relative;
-	padding: 1rem 1rem 0;
+	padding: 1rem 2rem 0;
 
 	text-transform: uppercase;
-	margin-right: 1rem;
-	height: auto;
+	// margin-right: 0rem;
 	top: 0;
 	left: 0;
 	font-weight: 700;
+		background-color: white;
 	&__list {
+		position: static;
+		top: 6vh;
 		display: flex;
-		margin: 0px 0px 1rem 1rem;
+		margin: 0rem 0px 2rem 1rem;
 		flex-wrap: wrap;
 		width: 100%;
 		justify-content: right;
 		list-style: none;
 		align-items: left;
+	
 	}
 	&__item {
 		display: inline-block;
@@ -28,6 +31,8 @@
 		@include respond(phone){
 			display: block;
 			width: 100%;
+
+
 		}
 	}
 	&__link:link,
@@ -40,15 +45,69 @@
 		text-decoration: none;
 		border-top: solid 0.3rem transparent;
 		border-bottom: solid 0.3rem transparent;
+		
 	}
 	&__link:hover,
 	&__link:active {
 		transform: translateY(-0.2rem);
-		background-color: rgba($color-primary-light, $alpha: 0.2);
-		z-index: 4;
+		
+		z-index: 200;
 		opacity: 1;
-		border-top: solid 0.3rem red;
-		border-bottom: solid 0.3rem $color-primary-dark;
+	
 		transition: all 0.3s;
 	}
+}
+
+@media (max-width: 600px) {
+	.navigation {
+		position: fixed;
+		width: 100vw;
+		z-index: 50;
+		top: 6vh;
+		background-color: transparent;
+		&__link{
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			padding: inherit;
+			text-align: center;
+			&:link,
+			&:visited {
+				color: $color-white;		
+			}
+		}
+		&__list {
+			transform: translateY(-150%);
+			display: none;
+			opacity: 0;
+			text-align: center;
+			flex-direction: column;
+			width: 100vw;
+			margin-top: -2rem;
+		height: 0;
+ 
+		}
+		&__item {
+			font-size: 1rem;
+			z-index: 60;
+			padding: 1rem 0;
+			margin-right: 0;
+			background-color: rgba($color-primary-light, $alpha: 0.8);
+			border-top: 0.2rem solid $color-grey-dark;
+			
+			&:hover,
+			&:active {
+				background-color: rgba($color-primary-medium, $alpha: 1);
+			}
+		}
+		
+	}
+	.navigation__list.active {
+		display: flex;
+		transition: transform 1s ease;
+		transform: translateY(0);
+		opacity: 1;
+		height: auto;
+	}
+	
 }
