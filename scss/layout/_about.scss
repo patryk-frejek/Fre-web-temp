@@ -1,17 +1,16 @@
 .about {
 	margin-top: 8vh;
+padding: 1rem 2rem;
 
-	@include respond(big-desktop) {
-		margin-top: 5vh;
-	}
-	@include respond(tab-land) {
-		margin-top: 3vh;
-	}
 
+@include respond(tab-port){
+	padding: 1rem 0rem;
+
+}
 	&:not(:last-child) {
 		margin-bottom: 5rem;
 	}
-	gap: 3rem;
+	// gap: 3rem;
 	&__col {
 		// overflow: hidden;
 		width: 40%;
