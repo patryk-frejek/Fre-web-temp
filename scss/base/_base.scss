@@ -50,27 +50,3 @@ section {
 
 
 
-
-
-//////// ZMIANA PASKA NAWIGACJI NA PRZYCISK
-
-@media (max-width: 600px) {
-	.btn-menu {
-		display: block;
-		color: $color-white;
-		margin-top: 1rem;
-		background-color: rgba($color-primary-medium, $alpha: 0.8);
-		padding: 1rem 2rem;
-		border-radius: 0.2rem;
-		z-index: 200;
-		&:hover {
-			background-color: rgba($color-primary-dark, $alpha: 0.8);
-		}
-	}
-	.header {
-		&__logo-box {
-			position: absolute;
-			width: 8rem;
-		}
-	}
-}

@@ -6,16 +6,19 @@
 		z-index: 105;
 		width: 100%;
 		height: auto;
-		background-color: $color-primary-dark;
 		top: 0;
+
 	}
 
 	&__contact-list {
+		z-index: 200;
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
+		background-color: rgba($color-primary-dark,0.9);
 		// padding: auto ;
 		// height: 10%;
 	}
@@ -115,7 +118,8 @@
 	border-bottom: solid greenyellow 0.2rem;
 }
 .contactbar__logo-box {
-	max-height: 5vh;
+	display: block;
+	max-height: 7vh;
 	// margin-right: 20vw;
 	flex: 30%;
 }
@@ -124,49 +128,3 @@
 	height: 100%;
 	max-height: 5vh;
 }
-
-// .header {
-// 	position: relative;
-// 	margin-bottom: 3rem;
-// 	display: flex;
-// 	flex-direction: row;
-// 	width: 100%;
-// 	text-align: center;
-// 	align-items: center;
-// 	justify-content: space-between;
-// 	box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
-
-// 	background-image: linear-gradient(
-// 			to bottom,
-// 			rgba($color-primary-light, 0.8),
-// 			rgba($color-primary-dark, 0.8)
-// 		),
-// 		url(https://cdn.pixabay.com/photo/2016/08/14/18/27/sailing-boat-1593613_1280.jpg);
-// 	background-size: cover;
-// 	background-position: center center;
-// 	&__logo-box {
-// 		position: static;
-// 		top: 1rem;
-// 		left: 2rem;
-// 		padding: 1rem;
-// 		align-self: flex-start;
-// 		transition: transform 0.3s;
-// 		&:hover {
-// 			cursor: pointer;
-// 			transform: translateY(-0.3rem);
-// 			// box-shadow: 0 .2rem 4rem black;
-// 		}
-// 	}
-// 	&__logo {
-// 		width: 5rem;
-// 		height: 7rem;
-// 	}
-// 	&__text-box {
-// 		position: absolute;
-// 		top: 40%;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 		text-align: center;
-// 		max-width: 70%;
-// 	}
-// }
