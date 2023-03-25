@@ -1,20 +1,13 @@
 window.onload = init;
 
 
-window.onresize = () => {
-	if (window.innerWidth <= 600) {
-		navigation.style.top = contactBar.clientHeight + "px";;
-	} else {
-		navigation.style.top = 0 + "px";;
-		
-	}
-	
-}
+window.onresize = autoTopNavi;
 const toggle = document.querySelector(".btn-menu");
 const navbar = document.querySelector(".navigation__list");
 var navigation = document.querySelector(".navigation");
 const nav_item = document.querySelectorAll(".navigation__item");
 const dropmenu = document.querySelectorAll(".dropmenu");
+const linkButton = document.querySelectorAll(".link-button");
 const contactBar = document.querySelector(".header__contact-list");
 const header = document.querySelector(".header");
 var left = document.getElementsByClassName("header__split")[0];
@@ -22,7 +15,7 @@ var right = document.getElementsByClassName("header__split")[1];
 var split = document.getElementsByClassName("header__split");
 
 function init() {
-	
+	autoTopNavi();
 
 	toggle.onclick = () => {
 		navbar.classList.toggle("active");
@@ -30,18 +23,8 @@ function init() {
 		console.log("test");
 	};
 
-	for (let i = 0; i < nav_item.length; i++) {
-		nav_item[i].onmouseenter = () => dropmenu[i].classList.add("active");
-		dropmenu[i].onmouseenter = () => dropmenu[i].classList.add("active");
-		dropmenu[i].onmouseleave = () => {
-			setTimeout(() => {
-				dropmenu[i].classList.remove("active");
-			}, 100);
-		};
-		nav_item[i].onmouseleave = () =>
-			setTimeout(() => {
-				dropmenu[i].classList.remove("active");
-			}, 100);
+	for (let i = 0; i < linkButton.length; i++) {
+		linkButton[i].onclick = () => dropmenu[i].classList.toggle("active");
 	}
 
 	left.onmouseenter = () => {
@@ -64,4 +47,12 @@ function init() {
 		left.style.width = "50%";
 		right.style.left = "50%";
 	};
+}
+
+function autoTopNavi() {
+	if (window.innerWidth <= 600) {
+		navigation.style.top = contactBar.clientHeight + "px";;
+	} else {
+		navigation.style.top = 0 + "px";;
+	}
 }
