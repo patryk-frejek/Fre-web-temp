@@ -74,7 +74,7 @@
 			margin: 0;
 			left: -100vw;
 			& .active {
-				margin-top: 2.5rem;
+				// margin-top: 2.5rem;
 				left: 0;
 			}
 		}
@@ -84,7 +84,6 @@
 			text-align: center;
 			background-color: rgba($color-primary-light, 1);
 			border-top: solid darkgray 2px;
-			padding: 1rem;
 			margin-right: 0;
 			flex-basis: auto;
 		}
@@ -106,18 +105,19 @@
 	position: absolute;
 	height: 0rem;
 	overflow-y: hidden;
-	transition: all 0.5s ease-out;
 	width: 100%;
+	transition: all 0.5s ease-out;
 	opacity: 0;
 }
 .dropmenu.active {
 	z-index: 5100;
 	height: auto;
 	opacity: 1;
+	transition: all 0.5s ease-out;
 	@include respond(phone) {
-			position: absolute;
+			position: relative;
+			top: -75%;
 			
-		// height: 0;
 	}
 }
 
@@ -125,14 +125,15 @@
 	display: inline-block;
 	list-style: none;
 	width: 20vw;
-	border-top: solid black 0.1rem;
+	border-top: solid darkgray 0.1rem;
+	font-size: 1.4rem;
 	height: 3rem;
 	// height: 60%;
 	@include respond(phone) {
 		// height: 0;
-		top: -30%;
-		width: 30%;
-		margin:0 auto 0 60vw ;
+		top: -35%;
+		width: 100%;
+		
 	}
 }
 
@@ -145,9 +146,13 @@
 }
 .dropmenu__link:link,
 .dropmenu__link:visited {
+	@include respond(phone)
+	{
+	color: white;
+background-color: transparent;
+	}
 	color: black;
-	background-color: greenyellow;
-
+background-color: white;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
@@ -156,8 +161,9 @@
 .dropmenu__link:hover,
 .dropmenu__link:active {
 	text-decoration: none;
+	color: white;
 	text-transform: uppercase;
 	text-align: center;
 	text-justify: center;
-	background-color: bisque;
+	background-color:#247fff;
 }
