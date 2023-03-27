@@ -169,16 +169,15 @@
 	cursor: pointer;
 	position: fixed;
 	font-size: 3rem;
-	right: 10%;
-	top: 0.1rem;
+	right:1rem;
+	top: 1rem;
 	right: 1.5rem;
 	color: $color-white;
 	z-index: 101;
 	display: none;
 	@include respond (phone){
-		display: block;
+		display: inline-block;
 		color: $color-black;
-		margin-top: 1rem;
 		background-color: rgba(white, $alpha: 0.8);
 		padding: 0rem 1rem;
 		border-radius: 4rem;

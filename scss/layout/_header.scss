@@ -6,8 +6,8 @@
 		z-index: 105;
 		width: 100%;
 		height: auto;
-		top: 0;
 
+		top: 0;
 	}
 
 	&__contact-list {
@@ -18,7 +18,8 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		background-color: rgba($color-primary-dark,0.9);
+		background-color: rgba($color-primary-dark, 0.9);
+		min-height: 7rem;
 		// padding: auto ;
 		// height: 10%;
 	}
@@ -100,9 +101,24 @@
 
 //CONTACT LIST
 .contact-list__item {
+	position: relative;
 	display: inline-block;
 	padding: 1rem 2rem;
-	flex: 30%;
+	&:nth-child(2) {
+		margin-left: 30px;
+	}
+	@include respond(iphone) {
+		margin: 0;
+	}
+	&:nth-child(3) {
+		margin-right: 30px;
+		@include respond(iphone) {
+			margin: 0;
+		}
+	}
+	@include respond(iphone) {
+		margin: 0;
+	}
 }
 .contact-list__link:link,
 .contact-list__link:visited {
@@ -119,9 +135,9 @@
 }
 .contactbar__logo-box {
 	display: block;
+	position: absolute;
 	max-height: 7vh;
-	// margin-right: 20vw;
-	flex: 30%;
+	left: 2rem;
 }
 
 .contactbar__logo {
