@@ -32,6 +32,7 @@ text-align: center;
 		}
 		@include respond(phone){
 			letter-spacing: 0.2rem;
+			font-size: 2rem;
 		}
 	}
 	&--anim{
