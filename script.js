@@ -19,6 +19,9 @@ function init() {
 
 	toggle.onclick = () => {
 		navbar.classList.toggle("active");
+		toggle.firstChild.classList.toggle("fa-xmark");
+		toggle.firstChild.classList.toggle("fa-bars");
+		
 		navigation.classList.toggle("active");
 		console.log("test");
 	};
