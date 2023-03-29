@@ -1,80 +1,54 @@
 .about {
 	margin-top: 8vh;
 padding: 1rem 2rem;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-evenly;
 
+// @include respond(tab-port){
+// 	padding: 1rem 0rem;
 
-@include respond(tab-port){
-	padding: 1rem 0rem;
-
-}
-	&:not(:last-child) {
-		margin-bottom: 5rem;
-	}
-	// gap: 3rem;
-	&__col {
-		// overflow: hidden;
-		width: 40%;
+// }
+	// &:not(:last-child) {
+	// 	margin-bottom: 5rem;
+	// }
+	&__card {
+		width: 30%;
 		text-align: center;
-
-		&--center-paragraph{
-			// color:red;
+		border: 0.2rem soldi $color-primary-light;
+		margin: 1rem;
+		background-color: $color-grey-light-2;
+		transition: all .3s ease;
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.103);
+		border-radius: 3px;
+		&:hover{
+			transform: translateY(-0.2rem) scale(1.007);
+			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.293);
 		}
-
 		@include respond(tab-land) {
-			width: 90%;
-			margin: 0 auto;
+		width: 45%;
+		margin: 2rem auto;
+	}
+		@include respond (phone){
+				width: 100%;
 		}
 	}
+	&__text{
+		font-size:2rem;
+		display: inline-block;
+		height: 30rem;
+		padding: 0rem 2rem;
+		text-align: center;
+		hyphens: auto;
+	}
+
 	&__img {
-		width: 100%;
-		border-radius: 0.3rem;
-	}
-	&__composition {
-		border-radius: 0.3rem;
-		position: relative;
-		// overflow: hidden;
-	}
-	&__composition-photo {
-		border-radius: 0.3rem;
-		transition: transform 0.2s ease;
-		width: 49%;
-		&--p1 {
-			position: relative;
-			overflow: visible;
 
-			&:hover {
-				transform: scale(2) translate(4rem, 3rem);
-			}
-		}
-		&--p2 {
-			&:hover {
-				transform: scale(2) translate(-4rem, 3rem);
-			}
-		}
-		&--p3 {
-			&:hover {
-			}
-			width: 99%;
-		}
+	width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+			border-radius: 3px;
 	}
 
-	&__list {
-		padding-left: 7rem;
-		padding-bottom: 3rem;
-		line-height: 2;
-		text-align: left;
-		&:last-child() {
-			list-style: none;
-		}
-		&-item {
-			font-size: 2rem;
-		}
-	}
-	&__list-2 {
-		list-style: none;
-		text-align: left;
-		margin-left: 3rem;
-	}
-	&__item {
-	}
 }
