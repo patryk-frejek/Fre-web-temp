@@ -90,15 +90,19 @@ text-align: center;
 	background-image: linear-gradient(
 		to right bottom,
 		$color-primary-dark,
-		$color-secondary-light
+		$color-primary-light
 	);
 	-webkit-background-clip: text;
 	transition: all 0.2s ease;
 	letter-spacing: 0.2rem;
 	color: transparent;
+
 	&:hover {
-		transform: skewY(1deg) skewX(3deg) scale(1.1);
+		transform: scale(1.1);
 		text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.3);
+	}
+	&--anim{
+		animation: size-blink 0.5s infinite;
 	}
 }
 .paragraph {
@@ -109,7 +113,7 @@ text-align: center;
 	line-height: 1.5;
 	margin: auto 0;
 	&:not(:last-child) {
-		margin-bottom: 3rem;
+		// margin-bottom: 3rem;	
 	}
 
 	&--max-height-100px {
