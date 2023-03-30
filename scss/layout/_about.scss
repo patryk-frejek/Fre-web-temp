@@ -1,34 +1,42 @@
-.about {
+.cooperation {
 	margin-top: 8vh;
-padding: 1rem 2rem;
+padding: 3rem 2rem;
 display: flex;
 flex-wrap: wrap;
 align-items: center;
-justify-content: space-evenly;
-
-// @include respond(tab-port){
-// 	padding: 1rem 0rem;
-
-// }
-	// &:not(:last-child) {
-	// 	margin-bottom: 5rem;
-	// }
+justify-content: center;
+	@include respond ( medium-desktop){
+		clip-path: polygon(0 0 , 100% 0,100% 95%, 67% 98%,  33% 98%, 0% 95% );
+	}
 	&__card {
 		width: 30%;
 		text-align: center;
 		border: 0.2rem soldi $color-primary-light;
-		margin: 1rem;
 		background-color: $color-grey-light-2;
 		transition: all .3s ease;
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.103);
 		border-radius: 3px;
+		margin-top: -1.9rem;
+		margin: -1.9rem 0.5rem;
+			clip-path: polygon(0 0 , 0 100% ,100% 100%, 100% 0, 50% 3%, 0 0);
+			&:nth-of-type(1){
+				clip-path: polygon(0 0 , 0 97% ,50% 100%, 100% 97%,100% 0,50% 3%, 0 0);
+			}
+			&:nth-of-type(2){
+				clip-path: polygon(0 0 , 0 97% ,50% 100%, 100% 97%,100% 0,50% 3%, 0 0);
+			}
+			&:nth-of-type(3){
+				clip-path: polygon(0 0 , 0 97% ,50% 100%, 100% 97%,100% 0,50% 3%, 0 0);
+			}
 		&:hover{
 			transform: translateY(-0.2rem) scale(1.007);
 			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.293);
 		}
 		@include respond(tab-land) {
 		width: 45%;
-		margin: 2rem auto;
+		// margin: 2rem auto;
+		clip-path: polygon(0 0 , 0 97% ,50% 100%, 100% 97%,100% 0,50% 3%, 0 0);
+
 	}
 		@include respond (phone){
 				width: 100%;
