@@ -11,7 +11,17 @@
 
 
 }
-
+.main-quotation{
+	position: absolute;
+		z-index: -1;
+		background: url(../img/quotation-background-big.jpg);
+		width: 100%;
+		min-height: 100vh;
+		background-position: fixed;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		padding-bottom: 20vh;
+}
 .section-about {
 	// background-color: rgba($color-grey-light-1, $alpha: 0.95);
 	// padding: 25rem 0 5rem;

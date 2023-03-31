@@ -137,18 +137,17 @@
 
 	align-items: center;
 	justify-content: center;
-	color: blue;
-	width: 5rem;
-	aspect-ratio: 1;
+	color: white;
+	width: auto;
 	border: rgba($color-grey-dark, 0.3);
 	border-radius: 0.3rem;
-	background-color: $color-white;
+	background-color: $color-secondary-light;
 	position: fixed;
 	bottom: 30vh;
 	left: 0;
 	z-index: 100;
-	font-size: 500%;
-	opacity: 0.7;
+	font-size: 200%;
+	opacity: 0.9;
 	box-shadow: 0 0.2rem 1rem $color-black;
 	&:hover {
 		transform: translateY(-0.3rem);
@@ -157,11 +156,11 @@
 		text-decoration: none;
 		&:link,
 		&:visited {
-			color: blue;
+			color: whiteblue;
 		}
 		&:hover,
 		&active {
-			color: darkblue;
+			color: white;
 		}
 	}
 }

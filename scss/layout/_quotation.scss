@@ -36,7 +36,7 @@
 	}
 	&__text {
 		&.paragraph {
-			margin: 2rem 4rem;
+			margin: 0rem 4rem 2rem;
 			text-align: left;
 		}
 	}
@@ -62,4 +62,16 @@
 		&:active {
 		}
 	}
+}
+
+.feature-box__icon{
+    font-size: 10rem;
+    line-height: 1;
+// margin-bottom: .5rem;
+display: inline-block;
+
+color: red;
+&::before{
+    content:'F';
+}
 }
