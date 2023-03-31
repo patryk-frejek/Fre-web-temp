@@ -1,6 +1,7 @@
 .header {
-  height: 100vh;
-  margin-bottom: 3rem; }
+  height: auto;
+  margin-bottom: 3rem;
+  background-color: transparent; }
   .header__contactbar {
     position: fixed;
     z-index: 105;
@@ -408,9 +409,10 @@
 .quotation__background {
   position: absolute;
   z-index: 99;
-  background: url(../img/quotation-background-big.jpg);
-  width: 100%;
+  background: url(../img/quotation-background-big.jpg) center center fixed no-repeat;
+  width: 100vw;
   min-height: 60rem;
+  background-size: cover;
   filter: blur(5px); }
 
 .quotation__container {
@@ -438,7 +440,7 @@
     color: #ff2c2c; }
 
 .quotation__text.paragraph {
-  margin: 2rem 4rem;
+  margin: 0rem 4rem 2rem;
   text-align: left; }
 
 .quotation__form {
@@ -457,6 +459,14 @@
   margin-bottom: 4rem; }
   .quotation__button:link, .quotation__button:visited {
     color: white; }
+
+.feature-box__icon {
+  font-size: 10rem;
+  line-height: 1;
+  display: inline-block;
+  color: red; }
+  .feature-box__icon::before {
+    content: 'F'; }
 
 .btn {
   position: relative; }
@@ -482,7 +492,7 @@
     box-shadow: none; }
   .btn::after {
     content: "";
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -564,29 +574,29 @@
 .btn-side {
   display: flex;
   transition: all 0.3s;
+  padding: 0.2rem 1rem;
   align-items: center;
   justify-content: center;
-  color: blue;
-  width: 5rem;
-  aspect-ratio: 1;
+  color: white;
+  width: auto;
   border: rgba(119, 119, 119, 0.3);
   border-radius: 0.3rem;
-  background-color: #fff;
+  background-color: #ff2c2c;
   position: fixed;
   bottom: 30vh;
   left: 0;
   z-index: 100;
-  font-size: 500%;
-  opacity: 0.7;
+  font-size: 200%;
+  opacity: 0.9;
   box-shadow: 0 0.2rem 1rem #000; }
   .btn-side:hover {
     transform: translateY(-0.3rem); }
   .btn-side__link {
     text-decoration: none; }
     .btn-side__link:link, .btn-side__link:visited {
-      color: blue; }
+      color: whiteblue; }
     .btn-side__link:hover, .btn-side__linkactive {
-      color: darkblue; }
+      color: white; }
 
 .btn-menu {
   cursor: pointer;
@@ -632,13 +642,13 @@
   text-decoration: none;
   text-transform: lowercase;
   right: 0;
-  top: .5rem; }
+  top: 0.5rem; }
   .link-button:hover {
     text-shadow: 0 1rem 1rem black;
     top: 0.4rem; }
   .link-button:active {
     text-shadow: none;
-    top: .9rem; }
+    top: 0.9rem; }
   @media only screen and (max-width: 37.5em) {
     .link-button {
       transform: translateX(-300%);
@@ -833,6 +843,21 @@
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.main-quotation {
+  position: absolute;
+  z-index: -1;
+  background: url(../img/quotation-background-big.jpg);
+  position: absolute;
+  z-index: 99;
+  background: url(../img/quotation-background-big.jpg) center center fixed no-repeat;
+  background-size: auto;
+  width: 100vw;
+  min-height: 60rem;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 20vh; }
 
 @keyframes moveInLeft {
   0% {

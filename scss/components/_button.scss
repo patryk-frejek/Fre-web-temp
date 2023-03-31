@@ -31,7 +31,7 @@
 	}
 	&::after {
 		content: "";
-		border-radius: .5rem;
+		border-radius: 0.5rem;
 		display: inline-block;
 		height: 100%;
 		width: 100%;
@@ -134,7 +134,7 @@
 .btn-side {
 	display: flex;
 	transition: all 0.3s;
-
+	padding: 0.2rem 1rem;
 	align-items: center;
 	justify-content: center;
 	color: white;
@@ -213,14 +213,14 @@
 	text-decoration: none;
 	text-transform: lowercase;
 	right: 0;
-	top: .5rem;
+	top: 0.5rem;
 	&:hover {
 		text-shadow: 0 1rem 1rem rgba(0, 0, 0, 1);
 		top: 0.4rem;
 	}
 	&:active {
 		text-shadow: none;
-		top: .9rem;
+		top: 0.9rem;
 	}
 	@include respond(phone) {
 		transform: translateX(-300%);

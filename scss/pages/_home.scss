@@ -12,14 +12,19 @@
 
 }
 .main-quotation{
-	position: absolute;
+		position: absolute;
 		z-index: -1;
 		background: url(../img/quotation-background-big.jpg);
+		position: absolute;
+z-index: 99;
+background: url(../img/quotation-background-big.jpg) center center fixed no-repeat;
+  background-size: auto;
+width: 100vw;
+min-height: 60rem;
+background-size: cover;
 		width: 100%;
 		min-height: 100vh;
-		background-position: fixed;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
+
 		padding-bottom: 20vh;
 }
 .section-about {
