@@ -270,7 +270,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ff7730;
+  background-color: #9d0000;
   background: radial-gradient(circle, #11366a, #1a54a5);
   padding: 2rem 2rem;
   margin-top: -1rem;
@@ -322,7 +322,7 @@
       .footer__link:link .fa-youtube, .footer__link:visited .fa-youtube {
         color: red; }
     .footer__link:hover, .footer__link:active {
-      color: #fbff00;
+      color: #ff2c2c;
       transform: skew(3deg, 3deg) translateY(-0.3rem); }
   .footer__copyright-text {
     width: 80%;
@@ -410,7 +410,7 @@
   z-index: 99;
   background: url(../img/quotation-background-big.jpg);
   width: 100%;
-  height: 60rem;
+  min-height: 60rem;
   filter: blur(5px); }
 
 .quotation__container {
@@ -418,20 +418,24 @@
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: ce;
+  justify-content: center;
   width: 70vw;
   text-align: center;
-  height: 50rem;
-  background-color: rgba(255, 152, 152, 0.83);
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.83);
   margin: 10rem auto;
   flex-direction: column;
   border-radius: 0.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .quotation__container {
+      width: 100%; } }
 
 .quotation__heading {
   display: inline-block;
   margin: 8rem auto 5rem; }
   .quotation__heading--sub {
-    font-size: 70%; }
+    font-size: 70%;
+    color: #ff2c2c; }
 
 .quotation__text.paragraph {
   margin: 2rem 4rem;
@@ -449,7 +453,8 @@
   text-transform: uppercase;
   text-decoration: none;
   font-size: 2rem;
-  background-color: red; }
+  background-color: red;
+  margin-bottom: 4rem; }
   .quotation__button:link, .quotation__button:visited {
     color: white; }
 
