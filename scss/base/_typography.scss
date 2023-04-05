@@ -10,9 +10,9 @@ body {
 	color: $color-white;
 	text-transform: uppercase;
 	backface-visibility: hidden;
-position: relative;
-z-index: 4;
-text-align: center;
+	position: relative;
+	z-index: 4;
+	text-align: center;
 	&--main {
 		display: block;
 		font-size: 3rem;
@@ -30,14 +30,13 @@ text-align: center;
 		margin-bottom: 6rem;
 		&.animation {
 		}
-		@include respond(phone){
+		@include respond(phone) {
 			letter-spacing: 0.2rem;
 			font-size: 2rem;
 		}
 	}
-	&--anim{
+	&--anim {
 		animation: slide-up 1s ease-out;
-
 	}
 }
 
@@ -101,19 +100,19 @@ text-align: center;
 		transform: scale(1.1);
 		text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.3);
 	}
-	&--anim{
+	&--anim {
 		animation: size-blink 0.5s infinite;
 	}
 }
 .paragraph {
 	// display: inline-block;
 	text-align: center;
-	font-size: 2.4rem;
+	font-size: 1.5rem;
 	overflow-y: hidden;
 	line-height: 1.5;
 	margin: auto 0;
 	&:not(:last-child) {
-		// margin-bottom: 3rem;	
+		// margin-bottom: 3rem;
 	}
 
 	&--max-height-100px {
