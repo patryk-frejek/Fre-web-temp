@@ -9,9 +9,9 @@
 		clip-path: polygon(0 0, 100% 0, 100% 95%, 67% 98%, 33% 98%, 0% 95%);
 	}
 	&__card {
-		width: 30%;
+		width: 25%;
 		text-align: center;
-		border: 0.2rem soldi $color-primary-light;
+		border: 0.2rem solid $color-primary-light;
 		background-color: $color-grey-light-2;
 		transition: all 0.3s ease;
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.103);
@@ -33,7 +33,7 @@
 			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.293);
 		}
 		@include respond(tab-land) {
-			width: 45%;
+			width: 34%;
 			// margin: 2rem auto;
 			clip-path: polygon(0 0, 0 97%, 50% 100%, 100% 97%, 100% 0, 50% 3%, 0 0);
 		}
