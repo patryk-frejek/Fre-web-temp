@@ -59,10 +59,11 @@
 		&:visited {
 			color: white;
 		}
-		&:hover,
-		&:active {
-		}
 	}
+	&__container:hover &__button{
+		transform: scale(1.2);
+	}
+
 }
 
 .feature-box__icon{

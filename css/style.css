@@ -461,6 +461,9 @@
   .quotation__button:link, .quotation__button:visited {
     color: white; }
 
+.quotation__container:hover .quotation__button {
+  transform: scale(1.2); }
+
 .feature-box__icon {
   font-size: 10rem;
   line-height: 1;
