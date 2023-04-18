@@ -27,6 +27,15 @@ background-size: cover;
 
 		padding-bottom: 20vh;
 }
+.section-realisations{
+			padding-bottom: 5rem;
+	margin-bottom: 5rem;
+	 display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
 .section-about {
 	// background-color: rgba($color-grey-light-1, $alpha: 0.95);
 	// padding: 25rem 0 5rem;

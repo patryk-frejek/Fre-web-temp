@@ -435,7 +435,6 @@
   .cooperation__card {
     width: 25%;
     text-align: center;
-    border: 0.2rem solid #1a54a5;
     background-color: #ebebebc0;
     transition: all 0.3s ease;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.103);
@@ -471,6 +470,31 @@
     height: auto;
     margin-bottom: 1rem;
     border-radius: 3px; }
+
+.realisations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem; }
+  .realisations__heading {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem; }
+  .realisations__logo {
+    text-align: center;
+    display: inline-block;
+    height: 10rem;
+    width: 30rem;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat; }
+    .realisations__logo--1 {
+      background-image: url(../img/logo_small-bkz.png); }
+    .realisations__logo--2 {
+      background-image: url(../img/logo_small.png); }
+    .realisations__logo--3 {
+      background-image: url(../img/logo-gk.png); }
 
 .btn {
   position: relative; }
@@ -862,6 +886,15 @@
   width: 100%;
   min-height: 100vh;
   padding-bottom: 20vh; }
+
+.section-realisations {
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap; }
 
 @keyframes moveInLeft {
   0% {
