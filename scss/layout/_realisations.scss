@@ -14,10 +14,14 @@
         text-align: center;
         display: inline-block;
         height: 10rem;
-        width: 30rem;
+        width:25vw;
         background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
+        transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:hover{
+            transform: scale3d(1.2 ,1.2, 1.5)  translateY(-5px);
+        }
         &--1{
             background-image: url(../img/logo_small-bkz.png); 
         }

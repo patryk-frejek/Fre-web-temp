@@ -376,7 +376,8 @@
   height: auto;
   background-color: rgba(255, 255, 255, 0.83);
   margin: 10rem auto;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   border-radius: 0.4rem; }
   @media only screen and (max-width: 56.25em) {
     .quotation__container {
@@ -384,7 +385,8 @@
 
 .quotation__heading {
   display: inline-block;
-  margin: 8rem auto 5rem; }
+  margin: 8rem auto 5rem;
+  flex: 100%; }
   .quotation__heading--sub {
     font-size: 70%;
     color: #ff2c2c; }
@@ -392,12 +394,13 @@
 .quotation__text {
   margin: 0rem 4rem 2rem;
   text-align: left;
-  font-size: 2rem; }
+  font-size: 2rem;
+  flex: 40%; }
 
 .quotation__form {
   display: flex;
   align-items: right;
-  justify-content: right;
+  justify-content: center;
   position: relative;
   z-index: 101;
   padding: 3rem 2rem; }
@@ -407,7 +410,9 @@
   text-decoration: none;
   font-size: 2rem;
   background-color: red;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  margin-left: 30%;
+  margin-right: 30%; }
   .quotation__button:link, .quotation__button:visited {
     color: white; }
 
@@ -418,9 +423,10 @@
   font-size: 10rem;
   line-height: 1;
   display: inline-block;
+  margin: 1rem 4rem;
   color: red; }
   .feature-box__icon::before {
-    content: 'F'; }
+    content: "F"; }
 
 .cooperation {
   margin-top: 8vh;
@@ -485,10 +491,13 @@
     text-align: center;
     display: inline-block;
     height: 10rem;
-    width: 30rem;
+    width: 25vw;
     background-size: contain;
     background-position: center center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+    .realisations__logo:hover {
+      transform: scale3d(1.2, 1.2, 1.5) translateY(-5px); }
     .realisations__logo--1 {
       background-image: url(../img/logo_small-bkz.png); }
     .realisations__logo--2 {
